@@ -5,7 +5,7 @@
 
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-004914726163"
+    bucket         = "terraform-state"
     key            = "arnau/terraform-staging.tfstate"
     region         = "eu-west-1"
     encrypt        = true
