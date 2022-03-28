@@ -8,7 +8,9 @@ steps:
   commands:
   - echo "It works!"
 
-
+trigger:
+  target:
+  - production
 
 ---
 kind: secret
