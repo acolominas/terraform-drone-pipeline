@@ -37,7 +37,3 @@ steps:
   image: alpine
   commands:
   - echo "It works!"
-
-trigger:
-  target:
-  - staging
