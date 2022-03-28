@@ -10,7 +10,7 @@ steps:
 
 trigger:
   target:
-  - production
+  - staging
 
 ---
 kind: secret
