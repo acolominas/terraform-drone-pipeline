@@ -2,8 +2,43 @@ name: drone-test
 kind: pipeline
 type: docker
 
+trigger:
+  target:
+  - staging
+
+
 steps:
 - name: test
   image: alpine
   commands:
   - echo "It works!"
+
+---
+kind: secret
+name: prd-access-key
+get:
+  path: prod/drone-ci
+  name: AWS_ACCESS_KEY_ID
+
+---
+kind: secret
+name: prd-secret-key
+get:
+  path: prod/drone-ci
+  name: AWS_ACCESS_KEY_SECRET
+
+---
+kind: secret
+name: stg-access-key
+get:
+  path: stg/drone-ci
+  name: AWS_ACCESS_KEY_ID
+
+---
+kind: secret
+name: stg-secret-key
+get:
+  path: stg/drone-ci
+  name: AWS_ACCESS_KEY_SECRET
+
+...
